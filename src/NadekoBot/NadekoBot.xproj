@@ -2,9 +2,9 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
-    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)</VSToolsPath>
   </PropertyGroup>
-  <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(VSToolsPath)\Microsoft.VisualStudioVersion.v14.Common.props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>45ec1473-c678-4857-a544-07dfe0d0b478</ProjectGuid>
     <RootNamespace>NadekoBot</RootNamespace>
@@ -22,5 +22,5 @@
     <DnxInvisibleContent Include="data\questions.json" />
     <DnxInvisibleContent Include="data\questions2.json" />
   </ItemGroup>
-  <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(VSToolsPath)\Microsoft.NETFramework.CurrentVersion.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>
